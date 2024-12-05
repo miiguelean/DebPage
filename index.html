@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juntos contra la pobreza</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/scrollAnimations.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2>Juntos contra la pobreza</h2>
+      </div>
+      <input type="search" id="search" placeholder="Buscar..." />
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Take Action Now</h1>
+          <p>Make a difference, fight poverty.</p>
+          <!-- <button class="cta-button">Join</button> -->
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about">
+        <h2>Who are we?</h2>
+        <div class="about-content">
+          <img
+            src="img/about.jpg"
+            alt="Imagen sobre nosotros"
+            class="about-img"
+          />
+          <div class="about-text">
+            <p>
+              Started by our dedicated and visionary leaders back in 2023,
+              Juntos contra la pobreza has grown into an impactful Social
+              Movement. We emphasize transparency in pursuing a clear strategy
+              that seeks to move the needle. We are constantly growing and
+              adapting to the changes of society, and invite you to learn more
+              about how you can make an impact.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Movement Section -->
+      <section class="our-movement">
+        <h2>Our Movement</h2>
+        <div class="grid-cards">
+          <div class="card">
+            <img src="img/movement1.jpg" alt="" />
+            <h3>Outreach</h3>
+            <p>No One Should be Silenced</p>
+          </div>
+          <div class="card">
+            <img src="img/imagen.jpg" alt="" />
+            <h3>Partnership</h3>
+            <p>Ensuring that All Voices are Heard</p>
+          </div>
+          <div class="card">
+            <img src="img/movement3.jpg" alt="" />
+            <h3>Advocacy</h3>
+            <p>Everyone Counts</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="call-to-action">
+        <h2>Engage Yourself</h2>
+        <p>
+          Juntos contra la pobreza encourages everyone to play their part in our
+          Social Movement. The only way we succeed is when the change comes from
+          within, and we want to empower you to take an active role. Learn more
+          about the opportunities available to lend your support.
+        </p>
+        <div class="actions">
+          <div class="card-action">
+            <img src="img/actions1.jpg" alt="Organizing an Event" />
+            <h3>Education</h3>
+            <div class="white-bg">
+              <h4>Your Help is Truly Appreciated</h4>
+              <a href="#" data-action="education">Take Action</a>
+            </div>
+          </div>
+          <div class="card-action">
+            <img src="img/actions2.jpg" alt="Volunteering" />
+            <h3>Health</h3>
+            <div class="white-bg">
+              <h4>Be Part of Something Great</h4>
+              <a href="#" data-action="health">Take Action</a>
+            </div>
+          </div>
+          <div class="card-action">
+            <img src="img/actions3.jpg" alt="Planning a Fundraiser" />
+            <h3>Infrastructure</h3>
+            <div class="white-bg">
+              <h4>Be a Force for Good</h4>
+              <a href="#" data-action="infrastructure">Take Action</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2024 Juntos contra la pobreza. Todos los derechos reservados.</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon">FB</a>
+        <a href="#" class="social-icon">TW</a>
+        <a href="#" class="social-icon">IG</a>
+      </div>
+    </footer>
+    <script>
+      const content = {
+        education: `
+          <p>• <b>Fundación Telefónica México</b>. Promotes digital education and training programs in marginalized communities.<br>
+          <a href="https://fundaciontelefonica.com.mx" target="_blank">https://fundaciontelefonica.com.mx</a></p>
+          <p>• <b>Enseña por México (Teach for Mexico)</b>. Trains young leaders to work as teachers in vulnerable communities.<br>
+          <a href="https://www.ensenapormexico.org" target="_blank">https://www.ensenapormexico.org</a></p>
+          <p>• <b>Save the Children Mexico</b>. Provides access to basic education and programs for children in risky situations.<br>
+          <a href="https://www.savethechildren.mx" target="_blank">https://www.savethechildren.mx</a></p>
+        `,
+        health: `
+          <p>• <b>Fundación IMSS</b>. Offers medical support programs and disease prevention campaigns in rural communities.<br>
+          <a href="https://fundacionimss.org.mx" target="_blank">https://fundacionimss.org.mx</a></p>
+          <p>• <b>Doctors Without Borders Mexico</b>. Provides medical care in areas affected by extreme poverty and emergencies.<br>
+          <a href="https://www.msf.mx" target="_blank">https://www.msf.mx</a></p>
+          <p>• <b>Operation Smile Mexico</b>. Performs free reconstructive surgeries for children with cleft lips and palates.<br>
+          <a href="https://operacionsonrisa.org.mx" target="_blank">https://operacionsonrisa.org.mx</a></p>
+        `,
+        infrastructure: `
+          <p>• <b>Techo Mexico</b>. Builds emergency housing in marginalized communities while also promoting community development.<br>
+          <a href="https://www.techo.org/mexico" target="_blank">https://www.techo.org/mexico</a></p>
+          <p>• <b>Cántaro Azul Foundation</b>. Works on projects to guarantee access to potable water in rural communities.<br>
+          <a href="https://cantaroazul.org" target="_blank">https://cantaroazul.org</a></p>
+          <p>• <b>Habitat for Humanity Mexico</b>. Helps low-income families build or improve their homes.<br>
+          <a href="https://habitatmexico.org" target="_blank">https://habitatmexico.org</a></p>
+        `
+      };
+    
+      document.querySelectorAll('.card-action a').forEach(link => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault(); // Evita que el enlace recargue la página
+          const action = link.getAttribute('data-action');
+          if (content[action]) {
+            Swal.fire({
+              title: action.charAt(0).toUpperCase() + action.slice(1), // Capitaliza la acción
+              html: content[action],
+              icon: 'info',
+              confirmButtonText: 'Close'
+            });
+          }
+        });
+      });
+    </script>   
+  </body>
+</html>
